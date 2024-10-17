@@ -24,7 +24,13 @@ public class Game
     }
 
     public void pokemons() {
-        System.out.println(trainer.getPokemons());
+        System.out.println("----------------------------------------------------------------------");
+        System.out.println("Your pokemons:");
+        for(Pokemon pokemon : trainer.getPokemons())
+        {
+            System.out.println(pokemon.data.getString());
+        }
+        System.out.println("----------------------------------------------------------------------");
     }
 
     public void inventory() {

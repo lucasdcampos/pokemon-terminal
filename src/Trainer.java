@@ -9,9 +9,10 @@ public class Trainer
     public Trainer() {
         setup();
     }
-    
+
     void setup() {
         pokemons = new ArrayList<Pokemon>();
+        addRandomPokemon();
         addRandomPokemon();
     }
 
