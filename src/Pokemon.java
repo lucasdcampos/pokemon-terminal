@@ -6,5 +6,4 @@ public class Pokemon
         this.data = data;
     }
 
-    
 }
