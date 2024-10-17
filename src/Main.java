@@ -6,8 +6,7 @@ class Main {
 
         Game game = new Game();
 
-        System.out.print("B - Battle, S - Shop, P - Pokemons, I - Inventory, Q - Quit\n> ");
-        String input = scanner.nextLine();
+        String input = "";
 
         while (!input.equals("quit")) {
             System.out.print("B - Battle, S - Shop, P - Pokemons, I - Inventory, Q - Quit\n> ");
@@ -27,6 +26,9 @@ class Main {
                 case "I":
                     game.inventory();
                     break;
+                case "CLEAR":
+                    clearConsole();
+                    break;
                 default:
                     System.out.println("Invalid command!");
                     break;
@@ -34,5 +36,26 @@ class Main {
         }
         
         scanner.close();
+    }
+    
+    public final static void clearConsole()
+    {
+        try
+        {
+            final String os = System.getProperty("os.name");
+            
+            if (os.contains("Windows"))
+            {
+                Runtime.getRuntime().exec("cls");
+            }
+            else
+            {
+                Runtime.getRuntime().exec("clear");
+            }
+        }
+        catch (final Exception e)
+        {
+            //  Handle any exceptions.
+        }
     }
 }

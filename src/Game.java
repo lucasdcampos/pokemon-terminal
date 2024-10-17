@@ -11,7 +11,8 @@ public class Game
 
         Pokedex.initializePokedex();
 
-
+        trainer = new Trainer();
+        
     }
 
     public void battle() {
@@ -33,6 +34,5 @@ public class Game
     public void travelTo(String location) {
         currentLocation = location;
     }
-
 
 }

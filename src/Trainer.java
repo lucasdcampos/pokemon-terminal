@@ -1,9 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Trainer
 {
     String name;
-    Pokemon[] pokemons;
+    List<Pokemon> pokemons;
 
-    public Pokemon[] getPokemons() {
+    public Trainer() {
+        setup();
+    }
+    
+    void setup() {
+        pokemons = new ArrayList<Pokemon>();
+        addRandomPokemon();
+    }
+
+    public void addRandomPokemon() {
+        int randomIndex = Utils.randomInt((0), Pokedex.pokemons.length);
+        PokemonData data = Pokedex.pokemons[randomIndex];
+
+        Pokemon pokemon = new Pokemon(data);
+        pokemons.add(pokemon);
+    }
+
+    public List<Pokemon> getPokemons() {
         return pokemons;
     }
 }
