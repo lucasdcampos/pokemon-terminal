@@ -1,11 +1,9 @@
 public class Game
 {
-    String trainerName;
+    Trainer trainer;
     String currentLocation;
 
-    public Game(String name) {
-        trainerName = name;
-
+    public Game() {
         setup();
     }
 
@@ -25,9 +23,9 @@ public class Game
     }
 
     public void pokemons() {
-
+        System.out.println(trainer.getPokemons());
     }
-    
+
     public void inventory() {
         
     }

@@ -4,7 +4,7 @@ class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Game game = new Game("Trainer");
+        Game game = new Game();
 
         System.out.print("B - Battle, S - Shop, P - Pokemons, I - Inventory, Q - Quit\n> ");
         String input = scanner.nextLine();
