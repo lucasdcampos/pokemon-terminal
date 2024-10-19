@@ -45,4 +45,10 @@ public class Pokedex
         return pokemons;
     }
 
+    public static PokemonData getRandomPokemon() {
+        int random = Utils.randomInt(0, pokemons.length);
+
+        return pokemons[random];
+    }
+
 }
