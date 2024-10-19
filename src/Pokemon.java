@@ -25,4 +25,12 @@ public class Pokemon
         return HP;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public int takeDamage(int damage) {
+        return HP-=damage;
+    }
+
 }

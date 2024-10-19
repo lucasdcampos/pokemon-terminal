@@ -40,27 +40,6 @@ public class Utils {
         }
     }
 
-    public static void printRemainingSpace(String str, int offset) {
-
-        if(str.length() > CONSOLE_SIZE - offset) {
-            System.err.println("String too large!");
-            return;
-        }
-        
-        int spaces = (CONSOLE_SIZE / 2) - str.length() - offset;
-        for(int i = 0; i < spaces; i++) {
-            System.out.print(" ");
-        }
-        System.out.print(str);
-
-        for(int i = 0; i < spaces; i++) {
-            System.out.print(" ");
-        }
-
-        System.out.println("");
-
-    }
-
     static void printBorder(int len) {
         for (int i = 0; i < CONSOLE_SIZE/2 - len - 3; i++) {
             System.out.print(" ");

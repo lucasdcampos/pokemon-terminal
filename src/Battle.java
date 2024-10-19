@@ -19,14 +19,34 @@ public class Battle {
         
         while(active) {
             printBattleStatus();
-            scanner.nextLine();
-            break;
+            String input = scanner.nextLine();
+
+            if(input.equals("1")) {
+                attack();
+            }
+            else if(input.equals("2")) {
+                flee();
+            }
         }
+    }
+
+    void attack() {
+        if(wildPokemon.takeDamage(100) <= 0) {
+            System.out.println("You incapacitaded the Pokemon");
+            active = false;
+        }
+
+    }
+
+    void flee() {
+        System.out.println("You flee!");
+        active = false;
     }
 
     void printBattleStatus() {
         Utils.printSeparator();
         Utils.printSplit(playerPokemon.getData().getName() + " (You):", wildPokemon.getData().getName(), 0);
+        Utils.printSplit("LVL: " + playerPokemon.getLevel(), "LVL: " + wildPokemon.getLevel(), 0);
         Utils.printSplit("HP: " + playerPokemon.getHP(), "HP: " + wildPokemon.getHP(), 0);
         Utils.printSeparator();
 

@@ -9,7 +9,7 @@ class Main {
         String input = "";
 
         while (!input.equals("quit")) {
-            System.out.print("B - Battle, S - Shop, P - Pokemons, I - Inventory, Q - Quit\n> ");
+            System.out.print("\nB - Battle, S - Shop, P - Pokemons, I - Inventory, Q - Quit\n> ");
             input = scanner.nextLine();
 
             switch(input)
