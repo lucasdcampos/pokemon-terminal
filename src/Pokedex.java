@@ -1,10 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.io.File;  // Import the File class
+import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.Scanner; // Import the Scanner class to read text files
+
 public class Pokedex
 {
     static PokemonData[] pokemons; // apparently "pokemon" is already the plural of "pokemo"
 
     static void initializePokedex()
     {
-        // parse res/pokedex.json here and fill pokemons array
+        try {
+            File pokemonJson = new File("C:\\dev\\pokemon-terminal\\res\\pokedex.json");
+            Scanner myReader = new Scanner(pokemonJson);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+        myReader.close();
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("Erro");
+            e.printStackTrace();
+        }
+
 
         fillDebugPokemons();
     }
