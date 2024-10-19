@@ -1,5 +1,4 @@
-public class PokemonData
-{
+public class PokemonData {
     String name;
     int health;
     int baseAttack;
@@ -20,8 +19,32 @@ public class PokemonData
         this.specialAttack = specialAttack;
     }
 
-    public String getString()
-    {
-        return "Name: " + name + " HP: " + health + " Attack: " + baseAttack + " Defense: " + defense + " Speed: " + speed + " Sp. Attack: " + specialAttack;    
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getBaseAttack() {
+        return baseAttack;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getSpecialAttack() {
+        return specialAttack;
+    }
+
+    public String getString() {
+        return "Name: " + name + " HP: " + health + " Attack: " + baseAttack + 
+               " Defense: " + defense + " Speed: " + speed + " Sp. Attack: " + specialAttack;
     }
 }

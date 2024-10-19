@@ -16,7 +16,8 @@ public class Game
     }
 
     public void battle() {
-
+        Battle battle = new Battle(trainer.getPokemons().get(0));
+        battle.start();
     }
 
     public void shop() {
@@ -24,13 +25,13 @@ public class Game
     }
 
     public void pokemons() {
-        System.out.println("----------------------------------------------------------------------");
+        Utils.printSeparator();
         System.out.println("Your pokemons:");
         for(Pokemon pokemon : trainer.getPokemons())
         {
             System.out.println(pokemon.data.getString());
         }
-        System.out.println("----------------------------------------------------------------------");
+        Utils.printSeparator();
     }
 
     public void inventory() {

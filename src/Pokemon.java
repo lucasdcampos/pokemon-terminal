@@ -2,6 +2,7 @@ public class Pokemon
 {
     int level;
     PokemonData data;
+    int HP;
 
     public Pokemon() {
 
@@ -14,6 +15,14 @@ public class Pokemon
 
     public Pokemon(PokemonData data) {
         this.data = data;
+    }
+
+    public PokemonData getData() {
+        return data;
+    }
+
+    public int getHP() {
+        return HP;
     }
 
 }
