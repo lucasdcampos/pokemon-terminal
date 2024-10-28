@@ -104,3 +104,6 @@ desktop.ini
 
 .idea/
 .idea/*
+.vscode
+.idea
+target/
