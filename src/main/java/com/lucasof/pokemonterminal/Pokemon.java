@@ -32,7 +32,10 @@ public class Pokemon
     }
 
     public int takeDamage(int damage) {
-        return HP-=damage;
+        float damageTaken = damage * ((float)data.defense/100);
+        HP -= damageTaken;
+
+        return (int)damageTaken;
     }
 
 }

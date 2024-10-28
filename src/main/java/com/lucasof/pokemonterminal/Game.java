@@ -19,7 +19,12 @@ public class Game
 
     public void battle() {
         Battle battle = new Battle(trainer.getPokemons().get(0));
-        battle.start();
+        Pokemon wildPokemon = battle.start();
+
+        // not null means we captured a pokemon in the battle
+        if(wildPokemon != null) {
+            trainer.pokemons.add(wildPokemon);
+        }
     }
 
     public void shop() {
