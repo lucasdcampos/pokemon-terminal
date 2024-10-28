@@ -19,8 +19,8 @@ public class Trainer
     }
 
     public void addRandomPokemon() {
-        int randomIndex = Utils.randomInt((0), Pokedex.pokemons.length);
-        PokemonData data = Pokedex.pokemons[randomIndex];
+        int randomIndex = Utils.randomInt((0), Pokedex.pokemons.size());
+        PokemonData data = Pokedex.pokemons.get(randomIndex);
 
         Pokemon pokemon = new Pokemon(data);
         pokemons.add(pokemon);
