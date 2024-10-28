@@ -1,3 +1,5 @@
+package com.lucasof.pokemonterminal;
+
 import java.util.Random;
 
 public class Utils {

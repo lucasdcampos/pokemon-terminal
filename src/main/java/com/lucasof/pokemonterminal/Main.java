@@ -1,8 +1,8 @@
+package com.lucasof.pokemonterminal;
 import org.json.JSONObject;
-
 import java.util.Scanner;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

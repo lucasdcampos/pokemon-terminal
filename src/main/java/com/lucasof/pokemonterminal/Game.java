@@ -1,3 +1,5 @@
+package com.lucasof.pokemonterminal;
+
 public class Game
 {
     Trainer trainer;

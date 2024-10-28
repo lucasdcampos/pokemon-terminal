@@ -1,3 +1,5 @@
+package com.lucasof.pokemonterminal;
+
 public class Item {
     private String name;
     private int quantity;

@@ -1,9 +1,10 @@
+package com.lucasof.pokemonterminal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.Scanner; // Import the Scanner class to read text files
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Pokedex
 {
@@ -11,21 +12,6 @@ public class Pokedex
 
     static void initializePokedex()
     {
-        try {
-            File pokemonJson = new File("C:\\dev\\pokemon-terminal\\res\\pokedex.json");
-            Scanner myReader = new Scanner(pokemonJson);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
-            }
-        myReader.close();
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("Erro");
-            e.printStackTrace();
-        }
-
-
         fillDebugPokemons();
     }
 
