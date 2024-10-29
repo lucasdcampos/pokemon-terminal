@@ -10,11 +10,11 @@ public class Main {
 
         String input = "";
 
-        while (!input.equals("quit")) {
+        while (!input.toUpperCase().equals("Q")) {
             System.out.print("\nB - Battle, S - Shop, P - Pokemons, I - Inventory, Q - Quit\n> ");
             input = scanner.nextLine();
 
-            switch(input)
+            switch(input.toUpperCase())
             {
                 case "B":
                     game.battle();
